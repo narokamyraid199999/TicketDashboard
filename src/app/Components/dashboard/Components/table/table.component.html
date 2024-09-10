@@ -1,10 +1,30 @@
 <!-- tabke start -->
 <section>
   <!-- sort start -->
-  <div class="flex justify-between mt-6 mb-4">
-    <div>مبيعات التذاكر</div>
+  <div class="flex justify-between mt-8 mb-4">
+    <div class="flex gap-x-4 items-center">
+      <p class="text-xl">مبيعات التذاكر</p>
+      <div class="flex gap-x-3">
+        <input
+          class="w-[22rem]"
+          placeholder="بحث عن ..."
+          type="text"
+          pInputText
+          [(ngModel)]="search"
+        />
+        <p-button
+          icon="pi pi-sliders-h"
+          styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
+        />
+        <p-button
+          icon="pi pi-sort-alt"
+          styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
+        />
+      </div>
+    </div>
     <div>حجز تذكرة جديدة</div>
   </div>
+
   <!-- sort end -->
 </section>
 <!-- table end -->
