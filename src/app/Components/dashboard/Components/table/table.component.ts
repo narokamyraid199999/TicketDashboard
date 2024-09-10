@@ -73,6 +73,19 @@ export class TableComponent {
       numberOfPeople: 1,
       numberOfPayment: 'مرة واحدة',
     },
+    {
+      user: {
+        name: 'محمد الغريب',
+        image:
+          'https://t4.ftcdn.net/jpg/03/69/19/81/360_F_369198116_K0sFy2gRTo1lmIf5jVGeQmaIEibjC3NN.jpg',
+        phone: '0123456789',
+      },
+      ticketNumber: 'C-103',
+      ticketPrice: 54,
+      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة',
+      numberOfPeople: 1,
+      numberOfPayment: 'مرة واحدة',
+    },
   ];
 
   first = 0;
