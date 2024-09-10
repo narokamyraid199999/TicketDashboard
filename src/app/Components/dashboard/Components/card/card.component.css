@@ -1,5 +1,32 @@
 .copuon-container {
-  background: linear-gradient(135deg, #7158fe, #9d4de6);
+  /* background: linear-gradient(135deg, #7158fe, #9d4de6); */
+  background: linear-gradient(135deg, #9d4de6, #8a74f9);
   color: #fff;
+}
+
+.inner-container {
   padding: 2rem;
+}
+
+.coupon-shadow {
+  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.circle1,
+.circle2 {
+  background: #f3f5f7;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.circle1 {
+  right: -20px;
+}
+
+.circle2 {
+  left: -20px;
 }

@@ -7,14 +7,40 @@
   </div>
 
   <!-- ticket start -->
-  <div class="w-full">
-    <div class="copuon-container rounded-md">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-        explicabo architecto consectetur eaque fuga error vitae voluptatibus
-        mollitia? Unde fugit reprehenderit quidem totam tenetur eum maxime
-        dolorem reiciendis expedita doloremque!
-      </p>
+  <div class="w-full coupon-shadow">
+    <div class="copuon-container z-20 relative rounded-2xl">
+      <!-- <div
+        *ngFor="let elm of [10, 20, 30, 40]"
+        [class]="'w-full -z-10 absolute' + 'top-' + elm + ' right-' + elm"
+      >
+        <svg
+          width="100%"
+          viewBox="0 0 408 61"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M454.431 59.6183C420.657 48.8794 417.432 63.1149 383.628 52.3663C349.854 41.6274 353.078 27.3919 319.274 16.6433C285.5 5.90433 282.275 20.1398 248.471 9.39129C214.696 -1.34768 217.921 -15.5832 184.116 -26.3317C150.312 -37.0803 147.087 -22.8448 113.313 -33.5837C79.5087 -44.3323 82.7333 -58.5678 48.959 -69.3068C15.1847 -80.0457 11.93 -65.8198 -21.8443 -76.5588"
+            stroke="#3D405B"
+            stroke-opacity="0.16"
+            stroke-width="0.824934"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div> -->
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+
+      <div class="inner-container">
+        <div class="flex justify-center">
+          <div class="flex justify-between">
+            <p>عرض التذكرة الخاصة بالفيلم</p>
+            <button class="bg-transparent px-3 py-2 rounded-md">
+              <i class="pi pi-trash text-[#fff] text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- ticket end -->
