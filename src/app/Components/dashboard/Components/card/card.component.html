@@ -31,14 +31,33 @@
       <div class="circle1"></div>
       <div class="circle2"></div>
 
+      <div class="absolute top-5 left-10">
+        <button class="bg-transparent px-3 py-2 rounded-md">
+          <i class="pi pi-trash text-[#fff] text-3xl"></i>
+        </button>
+      </div>
+
       <div class="inner-container">
-        <div class="flex justify-center">
-          <div class="flex justify-between">
-            <p>عرض التذكرة الخاصة بالفيلم</p>
-            <button class="bg-transparent px-3 py-2 rounded-md">
-              <i class="pi pi-trash text-[#fff] text-xl"></i>
-            </button>
+        <div class="flex flex-col gap-y-4 justify-center items-center">
+          <div class="">
+            <p class="font-medium">عرض التذكرة الخاصة بالفيلم</p>
           </div>
+
+          <!-- copuon input start -->
+          <div class="relative">
+            <button
+              class="absolute left-1 top-1 bg-transparent px-3 py-2 rounded-md"
+            >
+              <i class="pi pi-clone text-[#317740] text-lg"></i>
+            </button>
+            <input
+              class="font-medium w-[17rem] text-center"
+              type="text"
+              pInputText
+              [(ngModel)]="couponCode"
+            />
+          </div>
+          <!-- coupon input end -->
         </div>
       </div>
     </div>
