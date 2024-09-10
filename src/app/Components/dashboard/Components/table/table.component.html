@@ -63,21 +63,55 @@
       >
         <ng-template pTemplate="header">
           <tr>
-            <th style="width: 14.2%; text-align: center">المستخدم</th>
-            <th style="width: 10.2%; text-align: center">رقم التذكرة</th>
-            <th style="width: 10.2%; text-align: center">قيمة التذكرة</th>
-            <th style="width: 24.2%; text-align: center">السينيمات</th>
-            <th style="width: 8.2%; text-align: center">عدد الاشخاص</th>
-            <th style="width: 14.2%; text-align: center">عدد مرات الشراء</th>
-            <th style="width: 24.2%; text-align: center">التذكرة</th>
+            <th style="color: #abaab1; width: 14.2%; text-align: center">
+              المستخدم
+            </th>
+            <th style="color: #abaab1; width: 10.2%; text-align: center">
+              رقم التذكرة
+            </th>
+            <th style="color: #abaab1; width: 10.2%; text-align: center">
+              قيمة التذكرة
+            </th>
+            <th style="color: #abaab1; width: 24.2%; text-align: center">
+              السينيمات
+            </th>
+            <th style="color: #abaab1; width: 8.2%; text-align: center">
+              عدد الاشخاص
+            </th>
+            <th style="color: #abaab1; width: 14.2%; text-align: center">
+              عدد مرات الشراء
+            </th>
+            <th style="color: #abaab1; width: 24.2%; text-align: center">
+              التذكرة
+            </th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-customer>
           <tr>
-            <td style="text-align: center">{{ customer.name }}</td>
+            <td style="text-align: center">
+              <div class="flex items-center gap-x-2">
+                <div>
+                  <img
+                    class="w-10 rounded-full"
+                    [src]="customer.user.image"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p>{{ customer.user.name }}</p>
+                  <p>{{ customer.user.phone }}</p>
+                </div>
+              </div>
+            </td>
             <td style="text-align: center">{{ customer.ticketNumber }}</td>
             <td style="text-align: center">{{ customer.ticketPrice }}</td>
-            <td style="text-align: center">{{ customer.cinemaName }}</td>
+            <td
+              pTooltip="صيدناوي مول , برج العرب"
+              tooltipPosition="top"
+              style="text-align: center"
+            >
+              {{ customer.cinemaName }}
+            </td>
             <td style="text-align: center">{{ customer.numberOfPeople }}</td>
             <td style="text-align: center">{{ customer.numberOfPayment }}</td>
           </tr>

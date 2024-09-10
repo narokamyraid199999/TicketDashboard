@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 interface ticketOwner {
-  name: string;
+  user: { name: string; image: string; phone: string };
   ticketNumber: string;
   ticketPrice: number;
   cinemaName: string;
@@ -22,7 +22,12 @@ export class TableComponent {
 
   customers: ticketOwner[] = [
     {
-      name: 'tamer',
+      user: {
+        name: 'أحمد محمود',
+        image:
+          'https://static.vecteezy.com/system/resources/previews/011/757/232/original/ma-m-a-letter-logo-design-initial-letter-ma-linked-circle-uppercase-monogram-logo-red-and-blue-ma-logo-m-a-design-ma-m-a-vector.jpg',
+        phone: '0123456789',
+      },
       ticketNumber: 'C-101',
       ticketPrice: 40,
       cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة ...',
