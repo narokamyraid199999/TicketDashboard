@@ -30,7 +30,46 @@ export class TableComponent {
       },
       ticketNumber: 'C-101',
       ticketPrice: 40,
-      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة ...',
+      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة',
+      numberOfPeople: 1,
+      numberOfPayment: 'مرة واحدة',
+    },
+    {
+      user: {
+        name: 'محمد الغريب',
+        image:
+          'https://t3.ftcdn.net/jpg/03/35/34/80/360_F_335348056_yY8QyHP966KePjyutnns1Puwt2bnngZc.jpg',
+        phone: '0123456789',
+      },
+      ticketNumber: 'C-102',
+      ticketPrice: 30,
+      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة',
+      numberOfPeople: 1,
+      numberOfPayment: 'مرة واحدة',
+    },
+    {
+      user: {
+        name: 'محمد الغريب',
+        image:
+          'https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid',
+        phone: '0123456789',
+      },
+      ticketNumber: 'C-102',
+      ticketPrice: 45,
+      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة',
+      numberOfPeople: 1,
+      numberOfPayment: 'مرة واحدة',
+    },
+    {
+      user: {
+        name: 'محمد الغريب',
+        image:
+          'https://t4.ftcdn.net/jpg/03/69/19/81/360_F_369198116_K0sFy2gRTo1lmIf5jVGeQmaIEibjC3NN.jpg',
+        phone: '0123456789',
+      },
+      ticketNumber: 'C-103',
+      ticketPrice: 54,
+      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة',
       numberOfPeople: 1,
       numberOfPayment: 'مرة واحدة',
     },

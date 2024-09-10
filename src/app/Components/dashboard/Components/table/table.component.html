@@ -53,13 +53,14 @@
       <p-table
         [value]="customers"
         [paginator]="true"
-        [rows]="5"
+        sortMode="multiple"
+        [rows]="4"
         [first]="first"
         [showCurrentPageReport]="true"
         [tableStyle]="{ 'min-width': '50rem' }"
-        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        currentPageReportTemplate="عرض {last} من أصل {totalRecords}"
         (onPage)="pageChange($event)"
-        [rowsPerPageOptions]="[10, 25, 50]"
+        [rowsPerPageOptions]="[8, 16, 24]"
       >
         <ng-template pTemplate="header">
           <tr>
@@ -69,7 +70,11 @@
             <th style="color: #abaab1; width: 10.2%; text-align: center">
               رقم التذكرة
             </th>
-            <th style="color: #abaab1; width: 10.2%; text-align: center">
+            <th
+              pSortableColumn="ticketPrice"
+              style="color: #abaab1; width: 10.2%; text-align: center"
+            >
+              <p-sortIcon field="ticketPrice" />
               قيمة التذكرة
             </th>
             <th style="color: #abaab1; width: 24.2%; text-align: center">
@@ -92,7 +97,7 @@
               <div class="flex items-center gap-x-2">
                 <div>
                   <img
-                    class="w-10 rounded-full"
+                    class="w-10 h-10 rounded-full"
                     [src]="customer.user.image"
                     alt=""
                   />
@@ -124,20 +129,13 @@
             </td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="paginatorleft">
+        <!-- <ng-template pTemplate="paginatorleft">
           <p-button
             type="button"
             icon="pi pi-plus"
             styleClass="p-button-text"
           />
-        </ng-template>
-        <ng-template pTemplate="paginatorright">
-          <p-button
-            type="button"
-            icon="pi pi-cloud"
-            styleClass="p-button-text"
-          />
-        </ng-template>
+        </ng-template> -->
       </p-table>
     </p-card>
   </div>
