@@ -98,22 +98,30 @@
                   />
                 </div>
                 <div>
-                  <p>{{ customer.user.name }}</p>
-                  <p>{{ customer.user.phone }}</p>
+                  <p class="font-medium">{{ customer.user.name }}</p>
+                  <p class="text-[#92A1AD]">{{ customer.user.phone }}</p>
                 </div>
               </div>
             </td>
-            <td style="text-align: center">{{ customer.ticketNumber }}</td>
-            <td style="text-align: center">{{ customer.ticketPrice }}</td>
+            <td style="text-align: center">
+              <p class="font-medium text-lg">{{ customer.ticketNumber }}</p>
+            </td>
+            <td style="text-align: center">
+              <p class="font-medium text-lg">${{ customer.ticketPrice }}</p>
+            </td>
             <td
               pTooltip="صيدناوي مول , برج العرب"
               tooltipPosition="top"
               style="text-align: center"
             >
-              {{ customer.cinemaName }}
+              <p class="font-medium text-lg">{{ customer.cinemaName }}</p>
             </td>
-            <td style="text-align: center">{{ customer.numberOfPeople }}</td>
-            <td style="text-align: center">{{ customer.numberOfPayment }}</td>
+            <td style="text-align: center">
+              <p class="font-medium text-lg">{{ customer.numberOfPeople }}</p>
+            </td>
+            <td style="text-align: center">
+              <p class="font-medium text-lg">{{ customer.numberOfPayment }}</p>
+            </td>
           </tr>
         </ng-template>
         <ng-template pTemplate="paginatorleft">
