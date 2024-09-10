@@ -17,6 +17,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { QRCodeModule } from 'angularx-qrcode';
 import { TooltipModule } from 'primeng/tooltip';
 import { TableModule } from 'primeng/table';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TableModule } from 'primeng/table';
     QRCodeModule,
     TooltipModule,
     TableModule,
+    InputSwitchModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

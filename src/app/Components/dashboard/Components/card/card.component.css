@@ -30,3 +30,7 @@
 .circle2 {
   left: -20px;
 }
+
+.edit-button:hover .edit-icon {
+  color: white;
+}

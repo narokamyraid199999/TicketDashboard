@@ -1,7 +1,7 @@
 <!-- tabke start -->
 <section>
   <!-- sort start -->
-  <div class="flex justify-between mt-8 mb-4">
+  <div class="flex justify-between mt-8 mb-6">
     <div class="flex gap-x-4 items-center">
       <p class="text-xl">مبيعات التذاكر</p>
       <div class="flex gap-x-3 relative">
@@ -31,8 +31,70 @@
         />
       </div>
     </div>
-    <div>حجز تذكرة جديدة</div>
+    <div class="flex gap-x-6 items-center">
+      <div class="flex items-center gap-x-2">
+        <p-inputSwitch [(ngModel)]="isFavourite" />
+        <p class="mb-2 text-[#9C9D9F]">مفعلة</p>
+      </div>
+
+      <div>
+        <p-button
+          label="حجز تذكرة جديدة"
+          styleClass="bg-white text-white bg-[#8A74F9] border-gray-300 shadow-sm"
+        />
+      </div>
+    </div>
   </div>
+
+  <!-- table start -->
+
+  <div class="mb-12">
+    <p-card>
+      <p-table
+        [value]="customers"
+        [paginator]="true"
+        [rows]="5"
+        [first]="first"
+        [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        (onPage)="pageChange($event)"
+        [rowsPerPageOptions]="[10, 25, 50]"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 25%">Name</th>
+            <th style="width: 25%">Country</th>
+            <th style="width: 25%">Company</th>
+            <th style="width: 25%">Representative</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+          <tr>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.country.name }}</td>
+            <td>{{ customer.company }}</td>
+            <td>{{ customer.representative.name }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+          <p-button
+            type="button"
+            icon="pi pi-plus"
+            styleClass="p-button-text"
+          />
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+          <p-button
+            type="button"
+            icon="pi pi-cloud"
+            styleClass="p-button-text"
+          />
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+  <!-- table end -->
 
   <!-- sort end -->
 </section>
