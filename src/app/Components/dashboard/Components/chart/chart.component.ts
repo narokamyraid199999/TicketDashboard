@@ -37,8 +37,15 @@ export class ChartComponent implements OnInit {
       title: {
         text: '',
       },
+      textStyle: {
+        fontSize: 18,
+      },
+
       tooltip: {
         trigger: 'axis',
+        textStyle: {
+          fontSize: 18,
+        },
         axisPointer: {
           type: 'cross',
           label: {
@@ -64,6 +71,10 @@ export class ChartComponent implements OnInit {
         {
           type: 'category',
           boundaryGap: false,
+          axisLabel: {
+            fontSize: 18,
+            color: '#9291A5',
+          },
           data: [
             'ديسمبر',
             'نوفمبر',
