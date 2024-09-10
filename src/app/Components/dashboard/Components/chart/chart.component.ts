@@ -28,9 +28,9 @@ export class ChartComponent implements OnInit {
 
   chartInit() {
     type EChartsOption = echarts.EChartsOption;
-    var chartDom = document.getElementById('main')!;
-    var myChart = echarts.init(chartDom);
-    var option: EChartsOption;
+    let chartDom = document.getElementById('main')!;
+    let myChart = echarts.init(chartDom);
+    let option: EChartsOption;
 
     option = {
       color: ['#8A74F9', '#8A74F9', '#8A74F9', '#8A74F9', '#8A74F9'],

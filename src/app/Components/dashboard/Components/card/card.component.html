@@ -32,7 +32,11 @@
       <div class="circle2"></div>
 
       <div class="absolute top-5 left-10">
-        <button class="bg-transparent px-3 py-2 rounded-md">
+        <button
+          pTooltip="حذف"
+          tooltipPosition="bottom"
+          class="bg-transparent px-3 py-2 rounded-md"
+        >
           <i class="pi pi-trash text-[#fff] text-3xl"></i>
         </button>
       </div>
@@ -46,6 +50,8 @@
           <!-- copuon input start -->
           <div class="relative">
             <button
+              pTooltip="نسخ"
+              tooltipPosition="left"
               class="absolute left-1 top-1 bg-transparent px-3 py-2 rounded-md"
             >
               <i class="pi pi-clone text-[#317740] text-lg"></i>
@@ -102,6 +108,8 @@
 
             <div>
               <qrcode
+                pTooltip="أمسح الكود"
+                tooltipPosition="right"
                 [qrdata]="
                   'https://github.com/narokamyraid199999/TicketDashboard/tree/master'
                 "

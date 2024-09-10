@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { QRCodeModule } from 'angularx-qrcode';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { QRCodeModule } from 'angularx-qrcode';
     ButtonModule,
     InputTextModule,
     QRCodeModule,
+    TooltipModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
