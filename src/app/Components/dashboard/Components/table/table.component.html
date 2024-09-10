@@ -4,9 +4,14 @@
   <div class="flex justify-between mt-8 mb-4">
     <div class="flex gap-x-4 items-center">
       <p class="text-xl">مبيعات التذاكر</p>
-      <div class="flex gap-x-3">
+      <div class="flex gap-x-3 relative">
+        <div class="absolute right-1 top-1">
+          <button class="bg-transparent px-3 py-2 rounded-md">
+            <i class="pi pi-search text-[#317740] text-lg"></i>
+          </button>
+        </div>
         <input
-          class="w-[22rem]"
+          class="w-[22rem] pr-10"
           placeholder="بحث عن ..."
           type="text"
           pInputText
@@ -14,9 +19,13 @@
         />
         <p-button
           icon="pi pi-sliders-h"
+          pTooltip="أعدادات"
+          tooltipPosition="bottom"
           styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
         />
         <p-button
+          pTooltip="فلترة"
+          tooltipPosition="bottom"
           icon="pi pi-sort-alt"
           styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
         />
