@@ -1,8 +1,38 @@
-<!-- card start -->
-<p-card header="Simple Card">
-  <div>
+<div>
+  <div class="flex mb-4 items-center gap-x-2">
+    <button class="bg-[#E7EAED] px-3 py-2 rounded-md">
+      <i class="pi pi-arrow-right text-black"></i>
+    </button>
     <p class="font-medium text-lg text-[#1C1C28]">تذكرة رقم #2342</p>
-    <div id="main" class="w-full h-[20rem]"></div>
   </div>
-</p-card>
-<!-- card end -->
+  <!-- card start -->
+  <p-card>
+    <div class="w-full">
+      <!-- cart title start -->
+      <div class="flex justify-between">
+        <div>
+          <div>
+            <p class="font-medium mb-1">إحصائيات إستخدام القسيمة</p>
+          </div>
+          <p class="font-[#92A1AD] opacity-75">
+            05 يوليو , 2023 - 05 أغسطس , 2023
+          </p>
+        </div>
+
+        <div>
+          <p-dropdown
+            [options]="usage"
+            [(ngModel)]="currentUsage"
+            optionLabel="name"
+            placeholder="اختار معدل الاستخدام"
+          />
+        </div>
+      </div>
+      <!-- cart title end -->
+      <div class="px-4 w-full">
+        <div id="main" class="w-full h-[15rem]"></div>
+      </div>
+    </div>
+  </p-card>
+  <!-- card end -->
+</div>

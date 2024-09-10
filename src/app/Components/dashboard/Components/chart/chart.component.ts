@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 
+interface usingRate {
+  name: string;
+  code: string;
+}
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -13,6 +18,14 @@ export class ChartComponent implements OnInit {
     this.chartInit();
   }
 
+  usage: usingRate[] = [
+    { name: 'سنويا', code: 'Yearly' },
+    { name: 'شهريا', code: 'monthly' },
+    { name: 'يوميا', code: 'daily' },
+  ];
+
+  currentUsage: usingRate = this.usage[0];
+
   chartInit() {
     type EChartsOption = echarts.EChartsOption;
     var chartDom = document.getElementById('main')!;
@@ -20,16 +33,16 @@ export class ChartComponent implements OnInit {
     var option: EChartsOption;
 
     option = {
-      color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+      color: ['#8A74F9', '#8A74F9', '#8A74F9', '#8A74F9', '#8A74F9'],
       title: {
-        text: 'Gradient Stacked Area Chart',
+        text: '',
       },
       tooltip: {
         trigger: 'axis',
         axisPointer: {
           type: 'cross',
           label: {
-            backgroundColor: '#6a7985',
+            backgroundColor: '#8A74F9',
           },
         },
       },
@@ -51,7 +64,20 @@ export class ChartComponent implements OnInit {
         {
           type: 'category',
           boundaryGap: false,
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: [
+            'ديسمبر',
+            'نوفمبر',
+            'أكتوبر',
+            'سبتمبر',
+            'أغسطس',
+            'يوليو',
+            'يونيو',
+            'مايو',
+            'أبريل',
+            'مارس',
+            'فبراير',
+            'يناير',
+          ],
         },
       ],
       yAxis: [
@@ -61,7 +87,7 @@ export class ChartComponent implements OnInit {
       ],
       series: [
         {
-          name: 'Line 1',
+          name: 'أستخدام',
           type: 'line',
           stack: 'Total',
           smooth: true,
@@ -74,18 +100,18 @@ export class ChartComponent implements OnInit {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: 'rgb(128, 255, 165)',
+                color: '#DDD7FD',
               },
               {
                 offset: 1,
-                color: 'rgb(1, 191, 236)',
+                color: '#E6E1FE',
               },
             ]),
           },
           emphasis: {
             focus: 'series',
           },
-          data: [140, 232, 101, 264, 90, 340, 250],
+          data: [100, 150, 50, 100, 250, 170, 180, 150, 150, 100, 50, 250],
         },
       ],
     };
