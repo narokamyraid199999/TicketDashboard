@@ -8,7 +8,7 @@
 
   <!-- ticket start -->
   <div class="w-full coupon-shadow">
-    <div class="copuon-container z-20 relative rounded-2xl">
+    <div class="copuon-container w-full h-[23rem] relative rounded-2xl">
       <!-- <div
         *ngFor="let elm of [10, 20, 30, 40]"
         [class]="'w-full -z-10 absolute' + 'top-' + elm + ' right-' + elm"
@@ -50,14 +50,66 @@
             >
               <i class="pi pi-clone text-[#317740] text-lg"></i>
             </button>
-            <input
-              class="font-medium w-[17rem] text-center"
-              type="text"
-              pInputText
-              [(ngModel)]="couponCode"
-            />
+            <div>
+              <input
+                class="font-medium w-[17rem] text-center"
+                type="text"
+                pInputText
+                [(ngModel)]="couponCode"
+              />
+              <p class="text-center my-3">فعال حتي 15 يوليو 2023</p>
+            </div>
           </div>
           <!-- coupon input end -->
+
+          <!-- <hr class="border-dotted border-2 border-[f3f5f7] h-1 w-full" /> -->
+
+          <div>
+            <svg
+              class="w-full"
+              height="8px"
+              viewBox="0 0 382 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2.00009L380.378 2.00009"
+                stroke="white"
+                stroke-opacity="0.4"
+                stroke-width="2.4948"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dasharray="5.82 5.82"
+              />
+            </svg>
+          </div>
+
+          <!-- qrcode start -->
+
+          <div class="flex items-center justify-between">
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                porro!
+              </p>
+            </div>
+            <div>
+              <qrcode
+                [qrdata]="'https://github.com/Cordobo/angularx-qrcode'"
+                [allowEmptyString]="true"
+                [ariaLabel]="'QR Code image with the following content...'"
+                [colorDark]="'#000000ff'"
+                [colorLight]="'#ffffffff'"
+                [elementType]="'canvas'"
+                [errorCorrectionLevel]="'M'"
+                [margin]="4"
+                [scale]="1"
+                [title]="'A custom title attribute'"
+                [width]="110"
+              ></qrcode>
+            </div>
+          </div>
+          <!-- qrcode end -->
         </div>
       </div>
     </div>
