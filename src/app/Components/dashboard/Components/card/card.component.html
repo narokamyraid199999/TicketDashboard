@@ -86,25 +86,34 @@
 
           <!-- qrcode start -->
 
-          <div class="flex items-center justify-between">
+          <div class="flex w-full items-center justify-between">
             <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-                porro!
-              </p>
+              <p class="text-lg mb-2">خصم</p>
+              <div class="flex gap-x-6 items-center">
+                <p class="text-2xl"><span>25%</span></p>
+                <div class="border-white border rounded-lg">
+                  <button class="bg-transparent px-3 py-1 rounded-md">
+                    <i class="pi pi-trash text-[#fff]"></i>
+                    <span class="mx-2">مشاركة</span>
+                  </button>
+                </div>
+              </div>
             </div>
+
             <div>
               <qrcode
-                [qrdata]="'https://github.com/Cordobo/angularx-qrcode'"
+                [qrdata]="
+                  'https://github.com/narokamyraid199999/TicketDashboard/tree/master'
+                "
                 [allowEmptyString]="true"
-                [ariaLabel]="'QR Code image with the following content...'"
+                [ariaLabel]="'My GitHub Repository'"
                 [colorDark]="'#000000ff'"
                 [colorLight]="'#ffffffff'"
                 [elementType]="'canvas'"
                 [errorCorrectionLevel]="'M'"
                 [margin]="4"
                 [scale]="1"
-                [title]="'A custom title attribute'"
+                [title]="'Github Repo'"
                 [width]="110"
               ></qrcode>
             </div>
