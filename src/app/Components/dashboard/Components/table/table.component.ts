@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 
+interface ticketOwner {
+  name: string;
+  ticketNumber: string;
+  ticketPrice: number;
+  cinemaName: string;
+  numberOfPeople: number;
+  numberOfPayment: string;
+}
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -11,12 +20,14 @@ export class TableComponent {
   search: string = '';
   isFavourite: boolean = false;
 
-  customers: any[] = [
+  customers: ticketOwner[] = [
     {
       name: 'tamer',
-      country: { name: 'palestine', code: 'ps' },
-      company: 'Angular Developer',
-      representative: { name: 'Angular Developer ' },
+      ticketNumber: 'C-101',
+      ticketPrice: 40,
+      cinemaName: 'سينما مصر , مول العرب , برج الأطنان , سرايا القبة ...',
+      numberOfPeople: 1,
+      numberOfPayment: 'مرة واحدة',
     },
   ];
 

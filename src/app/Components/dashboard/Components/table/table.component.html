@@ -63,18 +63,23 @@
       >
         <ng-template pTemplate="header">
           <tr>
-            <th style="width: 25%">Name</th>
-            <th style="width: 25%">Country</th>
-            <th style="width: 25%">Company</th>
-            <th style="width: 25%">Representative</th>
+            <th style="width: 14.2%; text-align: center">المستخدم</th>
+            <th style="width: 10.2%; text-align: center">رقم التذكرة</th>
+            <th style="width: 10.2%; text-align: center">قيمة التذكرة</th>
+            <th style="width: 24.2%; text-align: center">السينيمات</th>
+            <th style="width: 8.2%; text-align: center">عدد الاشخاص</th>
+            <th style="width: 14.2%; text-align: center">عدد مرات الشراء</th>
+            <th style="width: 24.2%; text-align: center">التذكرة</th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-customer>
           <tr>
-            <td>{{ customer.name }}</td>
-            <td>{{ customer.country.name }}</td>
-            <td>{{ customer.company }}</td>
-            <td>{{ customer.representative.name }}</td>
+            <td style="text-align: center">{{ customer.name }}</td>
+            <td style="text-align: center">{{ customer.ticketNumber }}</td>
+            <td style="text-align: center">{{ customer.ticketPrice }}</td>
+            <td style="text-align: center">{{ customer.cinemaName }}</td>
+            <td style="text-align: center">{{ customer.numberOfPeople }}</td>
+            <td style="text-align: center">{{ customer.numberOfPayment }}</td>
           </tr>
         </ng-template>
         <ng-template pTemplate="paginatorleft">
