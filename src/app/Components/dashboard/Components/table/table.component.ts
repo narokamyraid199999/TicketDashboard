@@ -20,6 +20,10 @@ export class TableComponent {
   search: string = '';
   isFavourite: boolean = false;
 
+  onSuc(event: any) {}
+
+  onErr(event: any) {}
+
   customers: ticketOwner[] = [
     {
       user: {

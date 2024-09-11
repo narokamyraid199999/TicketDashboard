@@ -76,7 +76,7 @@
             </th>
             <th
               class="text-sm lg:text-base"
-              style="color: #abaab1; width: 10.2%; text-align: center"
+              style="color: #abaab1; width: 8.2%; text-align: center"
             >
               رقم التذكرة
             </th>
@@ -96,7 +96,7 @@
             </th>
             <th
               class="text-sm lg:text-base"
-              style="color: #abaab1; width: 8.2%; text-align: center"
+              style="color: #abaab1; width: 4.2%; text-align: center"
             >
               عدد الاشخاص
             </th>
@@ -108,7 +108,7 @@
             </th>
             <th
               class="text-sm lg:text-base"
-              style="color: #abaab1; width: 24.2%; text-align: center"
+              style="color: #abaab1; width: 30.2%; text-align: center"
             >
               التذكرة
             </th>
@@ -163,6 +163,44 @@
               <p class="font-medium text-sm lg:text-base xl:text-lg">
                 {{ customer.numberOfPayment }}
               </p>
+            </td>
+            <td style="text-align: center">
+              <div class="flex items-center gap-x-8">
+                <!-- pdf start -->
+                <div class="flex items-center gap-x-3">
+                  <button class="bg-[#8A74F91A] px-3 py-2 rounded-md">
+                    <i class="pi pi-ticket text-purple-700"></i>
+                  </button>
+                  <div>
+                    <p class="font-medium text-sm lg:text-base">
+                      تذكرة رقم 45.pdf
+                    </p>
+                    <p class="text-start text-sm lg:text-base">9mb . PDF</p>
+                  </div>
+                </div>
+                <!-- pdf end -->
+
+                <!-- download start -->
+                <div>
+                  <button
+                    pTooltip="تحميل"
+                    tooltipPosition="left"
+                    class="bg-[#8A74F91A] text-sm lg:text-base px-3 py-2 rounded-md hover:bg-orange-500 transition-all duration-200"
+                    type="button"
+                    fileSaver
+                    [method]="'GET'"
+                    [fileName]="'中文pdf.pdf'"
+                    [url]="'assets/pdf/myCV.pdf'"
+                    [header]="{ token: 'demo' }"
+                    [query]="{ pi: 1, name: 'demo' }"
+                    (success)="onSuc($event)"
+                    (error)="onErr($event)"
+                  >
+                    <i class="pi pi-download"></i>
+                  </button>
+                </div>
+                <!-- download end -->
+              </div>
             </td>
           </tr>
         </ng-template>

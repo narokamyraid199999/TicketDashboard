@@ -19,6 +19,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import { TableModule } from 'primeng/table';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ClipboardModule } from 'ngx-clipboard';
+import { FileSaverModule } from 'ngx-filesaver';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     TableModule,
     InputSwitchModule,
     ClipboardModule,
+    FileSaverModule,
+    HttpClientModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
