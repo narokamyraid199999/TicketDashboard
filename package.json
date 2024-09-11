@@ -21,6 +21,7 @@
     "angularx-qrcode": "^16.0.2",
     "echarts": "^5.5.1",
     "jquery": "^3.7.1",
+    "ngx-clipboard": "^16.0.0",
     "primeicons": "^7.0.0",
     "primeng": "^16.2.0",
     "rxjs": "~7.8.0",

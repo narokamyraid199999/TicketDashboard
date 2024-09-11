@@ -52,6 +52,8 @@
           <!-- copuon input start -->
           <div class="relative">
             <button
+              ngxClipboard
+              [cbContent]="couponCode"
               pTooltip="نسخ"
               tooltipPosition="left"
               class="absolute left-1 top-1 bg-transparent px-3 py-2 rounded-md"

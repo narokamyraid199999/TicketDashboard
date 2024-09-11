@@ -18,6 +18,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { TooltipModule } from 'primeng/tooltip';
 import { TableModule } from 'primeng/table';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { InputSwitchModule } from 'primeng/inputswitch';
     TooltipModule,
     TableModule,
     InputSwitchModule,
+    ClipboardModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
