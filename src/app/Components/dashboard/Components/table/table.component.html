@@ -4,8 +4,8 @@
   <div
     class="flex flex-col items-center justify-center gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between mt-8 mb-6"
   >
-    <div class="flex gap-x-4 items-center">
-      <p class="text-sm sm:text-base md:text-xl">مبيعات التذاكر</p>
+    <div class="flex flex-col md:flex-row gap-y-4 gap-x-4 items-center">
+      <p class="text-base lg:text-xl">مبيعات التذاكر</p>
       <div class="flex gap-x-1 sm:gap-x-3 relative">
         <div class="absolute right-1 top-1">
           <button class="bg-transparent px-3 py-2 rounded-md">
@@ -19,18 +19,20 @@
           pInputText
           [(ngModel)]="search"
         />
-        <p-button
-          icon="pi pi-sliders-h"
-          pTooltip="أعدادات"
-          tooltipPosition="bottom"
-          styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
-        />
-        <p-button
-          pTooltip="فلترة"
-          tooltipPosition="bottom"
-          icon="pi pi-sort-alt"
-          styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
-        />
+        <div class="hidden md:flex md:gap-x-2">
+          <p-button
+            icon="pi pi-sliders-h"
+            pTooltip="أعدادات"
+            tooltipPosition="bottom"
+            styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
+          />
+          <p-button
+            pTooltip="فلترة"
+            tooltipPosition="bottom"
+            icon="pi pi-sort-alt"
+            styleClass="bg-white text-gray-400 border-gray-300 shadow-sm"
+          />
+        </div>
       </div>
     </div>
     <div class="flex gap-x-6 items-center">
@@ -42,7 +44,7 @@
       <div>
         <p-button
           label="حجز تذكرة جديدة"
-          styleClass="bg-[#8A74F9] text-white bg-[#8A74F9] border-gray-300 shadow-sm"
+          styleClass="bg-[#8A74F9] text-white bg-[#8A74F9] border-gray-300 shadow-sm text-sm md:text-base"
         />
       </div>
     </div>
@@ -134,12 +136,12 @@
               </div>
             </td>
             <td style="text-align: center">
-              <p class="font-medium text-sm lg:text-base text-lg">
+              <p class="font-medium text-sm lg:text-base xl:text-lg">
                 {{ customer.ticketNumber }}
               </p>
             </td>
             <td style="text-align: center">
-              <p class="font-medium text-sm lg:text-base text-lg">
+              <p class="font-medium text-sm lg:text-base xl:text-lg">
                 ${{ customer.ticketPrice }}
               </p>
             </td>
@@ -148,17 +150,17 @@
               tooltipPosition="top"
               style="text-align: center"
             >
-              <p class="font-medium text-sm lg:text-base text-lg">
+              <p class="font-medium text-sm lg:text-base xl:text-lg">
                 {{ customer.cinemaName }}
               </p>
             </td>
             <td style="text-align: center">
-              <p class="font-medium text-sm lg:text-base text-lg">
+              <p class="font-medium text-sm lg:text-base xl:text-lg">
                 {{ customer.numberOfPeople }}
               </p>
             </td>
             <td style="text-align: center">
-              <p class="font-medium text-sm lg:text-base text-lg">
+              <p class="font-medium text-sm lg:text-base xl:text-lg">
                 {{ customer.numberOfPayment }}
               </p>
             </td>

@@ -4,7 +4,9 @@
       class="bg-[#F9F9F9] px-3 py-2 rounded-md edit-button shadow-md hover:bg-orange-500 transition-all duration-200"
     >
       <i class="pi pi-pen-to-square text-[#8A74F9] text-xl edit-icon"></i>
-      <span class="text-2xl mx-2 text-left edit-icon">تعديل</span>
+      <span class="text-sm md:text-base lg:text-2xl mx-2 text-left edit-icon"
+        >تعديل</span
+      >
     </button>
   </div>
 
@@ -46,7 +48,9 @@
       <div class="inner-container">
         <div class="flex flex-col gap-y-4 justify-center items-center">
           <div class="">
-            <p class="font-medium">عرض التذكرة الخاصة بالفيلم</p>
+            <p class="font-medium text-sm md:text-base">
+              عرض التذكرة الخاصة بالفيلم
+            </p>
           </div>
 
           <!-- copuon input start -->
@@ -67,7 +71,9 @@
                 pInputText
                 [(ngModel)]="couponCode"
               />
-              <p class="text-center my-3">فعال حتي 15 يوليو 2023</p>
+              <p class="text-center my-3 text-sm md:text-base">
+                فعال حتي 15 يوليو 2023
+              </p>
             </div>
           </div>
           <!-- coupon input end -->
@@ -98,13 +104,13 @@
 
           <div class="flex w-full items-center justify-between">
             <div>
-              <p class="text-lg mb-2">خصم</p>
+              <p class="text-base md:text-lg mb-2">خصم</p>
               <div class="flex gap-x-6 items-center">
-                <p class="text-2xl"><span>25%</span></p>
+                <p class="text-base md:text-2xl"><span>25%</span></p>
                 <div class="border-white border rounded-lg">
                   <button class="bg-transparent px-3 py-1 rounded-md">
                     <i class="pi pi-send text-[#fff]"></i>
-                    <span class="mx-2">مشاركة</span>
+                    <span class="mx-2 text-base md:text-base">مشاركة</span>
                   </button>
                 </div>
               </div>
